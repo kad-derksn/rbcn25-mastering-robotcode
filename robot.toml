@@ -1,0 +1,26 @@
+paths = "tests"
+
+output-dir="results/run-{}"
+
+[metadata]
+"ci run"="no"
+"python version"= { expr="platform.python_version()" }
+
+[profiles.headless]
+
+[profiles.headless.extend-variables]
+HEADLESS="On"
+
+[profiles.headfull]
+
+[profiles.headfull.extend-variables]
+HEADLESS="Off"
+
+[profiles.test.extend-variables]
+APP_URL="localhost:3001"
+
+[profiles.dev.extend-variables]
+APP_URL="localhost:3000"
+
+[profiles.dev_headless]
+inherits =["dev","headless"]

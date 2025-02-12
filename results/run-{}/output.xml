@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.2.2 (Python 3.12.8 on linux)" generated="2025-02-12T14:52:41.010548" rpa="false" schemaversion="5">
+<suite id="s1" name="Tests" source="/workspaces/rbcn25-mastering-robotcode/tests">
+<suite id="s1-s1" name="First" source="/workspaces/rbcn25-mastering-robotcode/tests/first.robot">
+<test id="s1-s1-t1" name="first" line="10">
+<kw name="New Browser" owner="Browser">
+<msg time="2025-02-12T14:52:41.149144" level="INFO">{"browser": "chromium", "headless": true, "chromiumSandbox": false, "devtools": false, "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 0.0, "timeout": 30000.0, "tracesDir": "/workspaces/rbcn25-mastering-robotcode/results/run-{}/browser/traces/temp/edb008ad-c580-4adb-b23e-57652611dd99"}</msg>
+<msg time="2025-02-12T14:52:41.154720" level="INFO">Starting Browser process /home/devcontainer/.local/share/hatch/env/virtual/rbc25-demo/7oZHHRid/rbc25-demo/lib/python3.12/site-packages/Browser/wrapper/index.js using port 51333</msg>
+<msg time="2025-02-12T14:52:41.154875" level="INFO">Node startup parameters: ['node', '/home/devcontainer/.local/share/hatch/env/virtual/rbc25-demo/7oZHHRid/rbc25-demo/lib/python3.12/site-packages/Browser/wrapper/index.js', '51333']</msg>
+<msg time="2025-02-12T14:52:41.661556" level="INFO">Successfully created browser with options: {"browser":"chromium","headless":true,"chromiumSandbox":false,"devtools":false,"handleSIGHUP":true,"handleSIGINT":true,"handleSIGTERM":true,"slowMo":0,"timeout":30000,"tracesDir":"/workspaces/rbcn25-mastering-robotcode/results/run-{}/browser/traces/temp/edb008ad-c580-4adb-b23e-57652611dd99"}</msg>
+<arg>${BROWSER}</arg>
+<arg>${HEADLESS}</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Create a new playwright Browser with specified options.</doc>
+<status status="PASS" start="2025-02-12T14:52:41.148187" elapsed="0.513867"/>
+</kw>
+<kw name="New Page" owner="Browser">
+<msg time="2025-02-12T14:52:41.809108" level="INFO">Successfully initialized new page object and opened url: localhost:3000</msg>
+<msg time="2025-02-12T14:52:41.809419" level="INFO">No context was open. New context was automatically opened when this page is created.</msg>
+<arg>${APP_URL}</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Open a new Page.</doc>
+<status status="PASS" start="2025-02-12T14:52:41.662570" elapsed="0.147173"/>
+</kw>
+<kw name="Type Text" owner="Browser">
+<msg time="2025-02-12T14:52:41.811521" level="INFO">Types the text 'do something' in the given field.</msg>
+<arg>input[id="todo-input"]</arg>
+<arg>do something</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Types the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2025-02-12T14:52:41.810725" elapsed="0.051955"/>
+</kw>
+<kw name="Click" owner="Browser">
+<msg time="2025-02-12T14:52:41.863772" level="INFO">Clicks the element 'button[id="add-todo-button"]'.</msg>
+<arg>button[id="add-todo-button"]</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2025-02-12T14:52:41.863061" elapsed="0.045128"/>
+</kw>
+<kw name="Take Screenshot" owner="Browser">
+<msg time="2025-02-12T14:52:41.992240" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="browser/screenshot/robotframework-browser-screenshot-1.png" target="_blank"&gt;&lt;img src="browser/screenshot/robotframework-browser-screenshot-1.png" width="800px"/&gt;&lt;/a&gt;</msg>
+<tag>PageContent</tag>
+<doc>Takes a screenshot of the current window or element and saves it to disk.</doc>
+<status status="PASS" start="2025-02-12T14:52:41.908529" elapsed="0.084011"/>
+</kw>
+<msg time="2025-02-12T14:52:41.996417" level="INFO">Set timeout to: 10000</msg>
+<msg time="2025-02-12T14:52:42.006591" level="INFO">Switching context to context=b3bdf263-e604-4b7e-82f5-38caca1929e9 in CURRENT</msg>
+<msg time="2025-02-12T14:52:42.011538" level="INFO">Successfully changed active context: context=b3bdf263-e604-4b7e-82f5-38caca1929e9</msg>
+<msg time="2025-02-12T14:52:42.019364" level="INFO">Successfully closed Context</msg>
+<status status="PASS" start="2025-02-12T14:52:41.147023" elapsed="0.846076"/>
+</test>
+<status status="PASS" start="2025-02-12T14:52:41.031080" elapsed="0.989452"/>
+</suite>
+<meta name="ci run">no</meta>
+<meta name="python version">3.12.8</meta>
+<status status="PASS" start="2025-02-12T14:52:41.013844" elapsed="1.011389"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Tests" id="s1" pass="1" fail="0" skip="0">Tests</stat>
+<stat name="First" id="s1-s1" pass="1" fail="0" skip="0">Tests.First</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
